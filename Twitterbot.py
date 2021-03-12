@@ -16,3 +16,16 @@ print(tweets[0].text)
 for tweet in tweets:
   if '#ieeebulc' in tweet.text.lower():
     print(str(tweet.id) + ' - ' + tweet.text)
+
+def read_last_seen(FILE_BANE):
+      file_read = open("FILE_NAME", 'r')
+      last_seen_id = int(file_read().strip())
+      file_read.close()
+      return last_seen_id
+
+def store_last_seen(FILE_NAME, last_seen_id)
+  file_write= open(FILE_NAME ,'w')
+  file_write.writer(str(last_seen_id))
+  file_write.close()
+  return
+  tweets = api.mentions_timeline() 
