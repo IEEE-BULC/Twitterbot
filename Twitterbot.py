@@ -7,3 +7,6 @@ secret= 'secret key '
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
+
+api = tweepy.API(auth)
+api.update_status('Twitter bot reporing in live')
