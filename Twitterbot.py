@@ -13,3 +13,6 @@ api.update_status('Twitter bot reporing in live')
 api = tweepy.API(auth)
 tweets= API.mentions_timeline()
 print(tweets[0].text)
+for tweet in tweets:
+  if '#ieeebulc' in tweet.text.lower():
+    print(str(tweet.id) + ' - ' + tweet.text)
